@@ -1,0 +1,723 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap');
+
+:root {
+    --main-color: #034c3c;
+    --lightgreen: #d0e3cc;
+    --lightbrown: #81726a;
+    --brown: #a6694e;
+    --black: #000000;
+    --bg: #f6f3ec;
+    --lightbg: #f1e7dd;
+    --white: #ffffff;
+    --border: .1rem solid rgb(104,83,77);
+}
+
+* {
+    font-family: "SUSE", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform:none;
+    transition: all 0.3s ease; /* Shorter transition for better hover effects */
+}
+
+html {
+    font-size: 62.5%;
+    overflow: auto;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem; /* Reduced width for the scrollbar */
+}
+
+html::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #6e6e6ead;
+    border-radius: 1rem; /* Adjusted to match the reduced width */
+}
+
+body {
+    background: var(--bg);
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color:#fff;
+    background:var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover{
+   letter-spacing: .2rem; 
+}
+
+.header {
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .logo img {
+    width: 150px; /* Adjust the width to make the image smaller */
+    height: auto; /* This keeps the aspect ratio of the image */
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+}
+
+.header .navbar a {
+    margin: 0 3rem; /* Increase margin to create more space between links */
+    font-size: 1.6rem;
+    font-weight:bold;
+    color: var(--black);
+    padding-bottom: 0.2rem; /* Reduced padding to keep the border closer to the text */
+    border-bottom: 0; /* Initial state, no border */
+    transition: color 0.3s ease, padding-bottom 0.3s ease, border-bottom 0.3s ease, transform 0.3s ease; /* Smooth transition for color, padding, border, and zoom effect */
+    display: inline-block; /* Ensure that transform applies correctly */
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: .3rem solid var(--main-color); /* Increase border thickness to make it bolder */
+    padding-bottom: 0.2rem; /* Match padding with the initial state for proper alignment */
+    transform: scale(1.1); /* Add a zoom effect */
+}
+
+.header .icons div {
+    color:#000000;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    transition: color 0.3s ease, transform 0.3s ease; /* Add transition for zoom effect on icons */
+}
+
+.header .icons div:hover {
+    color: var(--main-color);
+    transform: scale(1.1); /* Add a zoom effect to icons */
+}
+
+/* Ensure menu-btn is hidden */
+#products-btn {
+    display: none;
+}
+
+.header .search-form {
+    position: absolute;
+    top: 115%; right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .search-form.active{
+    transform: scaleY(1);
+}
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+
+.header .search-form label {
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--black);
+}
+
+.header .search-form label:hover {
+    color: var(--main-color);
+}
+
+.inicio {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../images/inicio/inicio03.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 5rem;
+    position: relative;
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.3), /* Inner shadow for embedded effect */
+                0 0 15px rgba(0, 0, 0, 0.1); /* Soft outer shadow */
+    margin: 3rem; /* Add margin around the section */
+   }
+
+.inicio .content {
+    text-align: center;
+    color: var(--white);
+}
+
+.inicio h3 {
+    font-size: 6rem;
+    font-weight:bold;
+    margin-bottom: 1.5rem;
+}
+
+.inicio p {
+    font-size: 3rem;
+    font-weight:bolder;
+    margin-bottom: 2rem;
+}
+
+.about-us {
+    padding: 50px 20px;
+    background-color: var(--lightgreen);
+}
+
+.about-us h2 {
+    font-size: 4.5Rem;
+    margin: 15px 0;
+    color: var(--main-color);
+    text-align: center; /* Center align the section heading */
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; /* Add space between the image and text */
+}
+
+.about-image {
+    flex: 1 1 40%;
+    max-width: 400px;
+    margin: 10px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 1 1 50%;
+    max-width: 600px;
+    margin: 10px;
+    text-align: left;
+}
+
+.about-text h3 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #555;
+    text-align: justify;
+}
+
+.about-us .btn {
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.about-us .btn:hover {
+    background: var(--brown);
+}
+
+
+/* Essential Products Section */
+.essential-products {
+    padding: 5rem 7%;
+    background-color: var(--bg);
+    text-align: center;
+    font-size: 3rem;
+    color: var(--brown);
+    font-weight: lighter;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.product {
+    background: var(--lightbg);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: calc(25% - 2rem);
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    min-height: 350px; /* Reduce height as there is only one button now */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center;
+}
+
+.product img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+    max-height: 200px;
+    object-fit: contain;
+    align-self: center;
+}
+
+.product h3 {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+    text-align: center;
+    min-height: 3rem;
+}
+
+.product p {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: var(--brown);
+    margin-bottom: 1rem;
+    min-height: 2rem;
+}
+
+.product .btn-container {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin-top: auto; /* Push the button to the bottom */
+    width: 80%;
+}
+
+.product .btn-container .btn-cart {
+    padding: 0.8rem;
+    font-size: 1.4rem;
+    color: var(--white);
+    background: var(--brown);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Make the button full width */
+}
+
+.product .btn-container .btn-cart:hover {
+    background: var(--main-color);
+    transform: scale(1.1);
+}
+
+.product:hover {
+    transform: scale(1.1);
+    background-color: #efd8ce;
+}
+
+
+
+/* Servicios Section */
+.services {
+    padding: 5rem 7%;
+    background-color: var(--bg);
+    text-align: center;
+    font-size: 3rem;
+    color: var(--main-color);
+    font-weight: lighter; /* Lighter font weight */
+    margin-top: 0; /* Ensure no top margin is pushing it down */
+    margin-bottom: 0; /* Ensure no bottom margin is pushing it down */
+}
+
+.services-container {
+    display: flex;
+    padding: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem; /* Space between service cards */
+}
+
+/* Service Card */
+.service {
+    background:var(--lightbg);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: calc(50% - 2rem); /* 2 cards per row */
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for transform and background-color */
+    min-height: 450px; /* Ensure this is not too tall */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out content evenly */
+}
+
+/* Service Image */
+.service img {
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 300px; /* Ensure image is not too tall */
+    object-fit: cover; /* Ensure the image covers the area */
+    border-radius: 1rem; /* Rounded corners for the image */
+    margin-bottom: 1rem; /* Space below the image */
+}
+
+/* Service Content */
+.service-content {
+    text-align: left; /* Align text to the left */
+    padding: 0 1rem; /* Add some padding to align content with the card */
+}
+
+.service h3 {
+    font-size: 2.2rem; /* Size for service title */
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 0.5rem; /* Space below the title */
+}
+
+.service p {
+    font-size: 1.4rem; /* Size for service description */
+    font-weight: bolder;
+    color: var(--black);
+    margin-bottom: 1.5rem; /* Space below the description */
+}
+
+.service .btn-more-info {
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+    color: var(--white);
+    background: var(--main-color);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition for background and transform */
+    display: block; /* Ensure the button takes up full width */
+    margin-top: auto; /* Push the button to the bottom */
+}
+
+.service .btn-more-info:hover {
+    background: var(--brown);
+    transform: scale(1.1); /* Subtle scaling effect on hover */
+}
+
+/* Hover Effect for Service Card */
+.service:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    background-color: var(--lightgreen); /* Change background color on hover */
+}
+
+.cart-items-container {
+    position: fixed;
+    right: 0;
+    top: 5rem;
+    width: 460px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    z-index: 1001; /* Ensures it appears above other content */
+    max-height: 600px; /* Limits the maximum height of the container */
+    overflow-y: auto; /* Enables vertical scrolling if content exceeds max height */
+    transform: translateX(100%); /* Initially position the cart off-screen to the right */
+    transition: transform 0.3s ease; /* Smooth transition for sliding effect */
+}
+
+/* Show the cart when it is active */
+.cart-items-container.active {
+    display: flex; /* Show when active */
+    transform: translateX(0); /* Slide the cart into view */
+}
+
+
+.cart-items-container .cart-item {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space between text and other elements */
+    padding: 0.5rem 0;
+    width: 100%; /* Ensure elements take full width */
+    border-bottom: 1px solid #ddd; /* Add border between items */
+    margin-bottom: 0.5rem; /* Space between items */
+}
+
+/* Styling for the cart item image */
+.cart-item img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    width: 150px; /* Set a specific width */
+    margin-right: 10px; /* Add space to the right of the image */
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+/* Styling for the cart item content (title, price, quantity) */
+.cart-item .content {
+    flex: 1;
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: space-between; /* Space between elements */
+    min-width: 0; /* Prevent overflow issues */
+}
+
+/* Styling for the product title */
+.cart-item .content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+    flex: 2; /* Adjust as needed */
+    overflow: hidden; /* Prevent text overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+}
+
+/* Style for the product price in the cart */
+.cart-item .price {
+    font-size: 1.5rem; /* Adjust the font size */
+    font-weight: 500; /* Make the price bold */
+    color: var(--brown); /* Change text color */
+    margin-left: 5px; /* Add space between price and other elements */
+    margin-right: 2rem;
+    text-align: right; /* Align the price to the right */
+}
+
+/* If the price is within a specific element, like a span or div, target it directly */
+.cart-item .price span {
+    display: inline-block; /* Keep the price inline with other elements */
+    padding: 5px; /* Add padding around the price */
+    background-color: #f8f9fa; /* Light background to highlight the price */
+    border-radius: 4px; /* Rounded corners for the background */
+}
+
+/* Styling for the quantity container */
+.cart-item .quantity {
+    display: flex;
+    align-items: center; /* Vertically center quantity buttons */
+    justify-content: center;
+    flex: 1; /* Allow the quantity container to grow */
+}
+
+/* Styling for the quantity buttons */
+.quantity-btn {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    font-size: 18px;
+    cursor: pointer;
+    flex: 0; /* Prevent buttons from expanding */
+}
+
+.quantity-btn:hover {
+    background-color: #ccc;
+}
+
+/* Styling for the quantity number display */
+.quantity span {
+    margin: 0 10px;
+    font-size: 18px;
+    display: inline-block; /* Ensure vertical alignment with buttons */
+}
+
+/* Style for the cart total display */
+.cart-total {
+    font-size: 20px; /* Adjust the font size */
+    font-weight:500; /* Make the total lighter */
+    margin-top: 15px; /* Space between cart items and total */
+    text-align: center; /* Center the total */
+    padding: 10px; /* Add padding */
+    color: var(--black); /* Change text color */
+}
+
+/* Style for the checkout button */
+.cart-items-container .btn {
+    display: block; /* Make the button fill the container width */
+    text-align: center; /* Center the text */
+    font-size: 18px; /* Adjust font size */
+    padding: 10px 0; /* Vertical padding */
+    background-color: var(--main-color); /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 10px; /* Space between total and button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.cart-items-container .btn:hover {
+    background-color: var(--brown); /* Darker color on hover */
+}
+
+#contacto {
+    background-color: var(--lightgreen);
+    padding: 50px 0;
+    text-align: center;
+    font-size: 3rem;
+  }
+  
+  #contacto h2 {
+    color: var(--main-color); /* Cambia 'var(--title-color)' por el color deseado */
+  }
+  
+  .contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  
+  .contact-form button {
+    padding: 15px;
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: var(--brown);
+    transform: scale(1.1); /* Efecto de zoom */
+  }
+  
+  .social-media {
+    margin-top: 30px;
+  }
+  
+  .social-icon {
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s ease; /* Efecto de zoom */
+  }
+  
+  .social-icon img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2); /* Zoom al pasar el cursor */
+  }
+  
+  
+
+
+
+
+/* Responsive adjustments */
+@media(max-width: 768px) {
+    .product {
+        width: calc(50% - 1rem); /* Two products per row on smaller screens */
+    }
+}
+
+@media(max-width: 450px) {
+    .product {
+        width: calc(100% - 2rem); /* One product per row on very small screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media(max-width: 768px) {
+
+    #products-btn {
+        display: inline-block;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 100%; /* Positions navbar just below the header */
+        right: -100%;
+        background:#fff;
+        width: 15rem;
+        height: calc(100vh - 9.5rem);
+        flex-direction: column; /* Ensure vertical stacking */
+        z-index: 999; /* Ensures navbar is on top */
+    }
+
+    .header .navbar.active{
+        right: 0;
+    }
+
+    .header .navbar a {
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+
+    .header .search-form {
+        width: 90;
+        right: 2rem;
+    }
+}
+
+@media(max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
