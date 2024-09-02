@@ -170,14 +170,16 @@
 </section>
 
 <section class="contacto" id="contacto">
+<section class="contacto" id="contacto">
     <div class="contact-container">
-      <h2>Contacto</h2>
-      <!-- Replace `your-formspree-id` with your actual Formspree ID -->
-      <form action="https://formspree.io/f/2551742035895778881" method="post" class="contact-form">
-        <input type="email" name="email" placeholder="Tu correo electrónico" required>
-        <textarea name="message" placeholder="Tu mensaje" required></textarea>
-        <button type="submit">Enviar Mensaje</button>
-      </form>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <h2>Contacto</h2>
+            <input type="hidden" name="access_key" value="ca44cfad-2664-49b5-9fe3-4e5b0ec5f282">
+            <input type="text" name="name" placeholder="Tu nombre" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Tu correo electrónico" class="contact-inputs" required>
+            <textarea name="message" placeholder="Tu mensaje" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
       <div class="social-media">
         <a href="https://www.facebook.com/people/Geo-Market/61564059224448/?_rdc=1&_rdr" target="_blank" class="social-icon">
           <img src="images/facebook.png" alt="Facebook">
