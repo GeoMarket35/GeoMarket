@@ -18,7 +18,15 @@
         <a href="#inicio">Inicio</a>
         <a href="#nosotros">Nosotros</a>
         <a href="#productos-esenciales">Productos</a>
-        <a href="#servicios">Servicios</a>
+        <div class="dropdown">
+            <a href="#servicios" class="dropdown-title">Servicios</a>
+            <div class="dropdown-menu">
+                <a href="servicio1.html">Estudios, Diseño y Planeamiento Minero</a>
+                <a href="servicio2.html">Ensayos Geofisicos</a>
+                <a href="servicio3.html">Ensayos de Laboratorio</a>
+                <a href="servicio4.html">Cursos Tecnicos y Tutorias</a>
+            </div>
+        </div>
         <a href="#contacto">Contacto</a>
     </nav>
 
@@ -35,45 +43,18 @@
 
     <div class="cart-items-container">
         <div class="cart-item">
-            <span class="fas fa-times"></span>
-            <img src="images/cartitem01.png" alt="">
             <div class="content">
-                <h3>Cart item 01</h3>
-                <div class="price">$15.99</div>
+                <div class="price"></div>
             </div>
         </div>
-        <div class="cart-item">
-            <span class="fas fa-times"></span>
-            <img src="images/cartitem02.png" alt="">
-            <div class="content">
-                <h3>Cart item 02</h3>
-                <div class="price">$15.99</div>
-            </div>
-        </div>
-        <div class="cart-item">
-            <span class="fas fa-times"></span>
-            <img src="images/cartitem03.png" alt="">
-            <div class="content">
-                <h3>Cart item 03</h3>
-                <div class="price">$15.99</div>
-            </div>
-        </div>
-        <div class="cart-item">
-            <span class="fas fa-times"></span>
-            <img src="images/cartitem04.png" alt="">
-            <div class="content">
-                <h3>Cart item 04</h3>
-                <div class="price">$15.99</div>
-            </div>
-        </div>
-        <a href="#" class="btn">Finalizar Compra</a>
+        <a href="#" class="btn">Checkout Now</a>
     </div>
 </header>
 
 <section class="inicio" id="inicio">
     <div class="content">
         <h3>¿Necesitas Productos o Servicios Geológicos?</h3>
-        <p>¡En Geomarket tienes la geología que deseas, a precios que amas!</p>
+        <p>¡En GeoMarket tienes la geología que deseas, a precios que amas!</p>
     </div>    
 </section>
 
@@ -135,41 +116,40 @@
     <h2>Servicios</h2>
     <div class="services-container">
         <div class="service">
-            <img src="images/service1.jpg" alt="Service1">
+            <img src="/images/service1.jpg" alt="Service Image 1">
             <div class="service-content">
-                <h3>Mapeo Geológico y Exploración Minera</h3>
-                <p>Description of the first service goes here. It should provide a brief overview of what the service entails.</p>
-                <button class="btn-more-info">Más información</button>
+                <h3>Estudios, Diseño y Planeamiento Minero</h3>
+                <p>Ofrecemos planificación minera avanzada, incluyendo PTO y EIA, cumpliendo con los estándares de la Agencia Nacional de Minería (ANM). Facilitamos mapeo geológico, exploración y gestión de permisos mineros.</p>
+                <button class="btn-more-info" onclick="window.location.href='servicio1.html';">Más información</button>
             </div>
         </div>
         <div class="service">
-            <img src="images/service2.jpg" alt="Service2">
+            <img src="/images/service2.jpg" alt="Service Image 2">
             <div class="service-content">
-                <h3>Evaluación y/o Solicitud de Titulos Mineros</h3>
-                <p>Description of the second service goes here. It should provide a brief overview of what the service entails.</p>
-                <button class="btn-more-info">Más información</button>
+                <h3>Ensayos Geofisicos</h3>
+                <p>Realizamos caracterización del subsuelo con técnicas como refracción sísmica, MASW y REMI para una evaluación precisa de propiedades geológicas y optimización de proyectos.</p>
+                <button class="btn-more-info" onclick="window.location.href='servicio2.html';">Más información</button>
             </div>
         </div>
         <div class="service">
-            <img src="images/service3.jpg" alt="Service3">
+            <img src="/images/service3.jpg" alt="Service Image 3">
             <div class="service-content">
-                <h3>Estudio de Suelos</h3>
-                <p>Description of the third service goes here. It should provide a brief overview of what the service entails.</p>
-                <button class="btn-more-info">Más información</button>
+                <h3>Ensayos de Laboratorio</h3>
+                <p>Llevamos a cabo análisis petrográficos detallados para determinar la composición y características de las rocas, proporcionando datos clave para la evaluación de recursos.</p>
+                <button class="btn-more-info" onclick="window.location.href='servicio3.html';">Más información</button>
             </div>
         </div>
         <div class="service">
-            <img src="images/service4.jpg" alt="Service4">
+            <img src="/images/service4.jpg" alt="Service Image 4">
             <div class="service-content">
                 <h3>Cursos Tecnicos y Tutorias</h3>
-                <p>Description of the fourth service goes here. It should provide a brief overview of what the service entails.</p>
-                <button class="btn-more-info">Más información</button>
+                <p>Ofrecemos formación técnica y tutorías especializadas en diversas ramas de la geología para mejorar habilidades profesionales y abordar desafíos específicos del sector.</p>
+                <button class="btn-more-info" onclick="window.location.href='servicio4.html';">Más información</button>
             </div>
         </div>
     </div>
 </section>
 
-<section class="contacto" id="contacto">
 <section class="contacto" id="contacto">
     <div class="contact-container">
         <form action="https://api.web3forms.com/submit" method="POST">
@@ -180,25 +160,46 @@
             <textarea name="message" placeholder="Tu mensaje" required></textarea>
             <button type="submit">Enviar Mensaje</button>
         </form>
-      <div class="social-media">
-        <a href="https://www.facebook.com/people/Geo-Market/61564059224448/?_rdc=1&_rdr" target="_blank" class="social-icon">
-          <img src="images/facebook.png" alt="Facebook">
-        </a>
-        <a href="https://www.instagram.com/geo.market.24/" target="_blank" class="social-icon">
-          <img src="images/instagram.png" alt="Instagram">
-        </a>
-        <a href="https://www.tiktok.com/@geomarket4" target="_blank" class="social-icon">
-          <img src="images/tiktok.png" alt="TikTok">
-        </a>
-        <a href="https://www.youtube.com/@GeoMarket-c6w" target="_blank" class="social-icon">
-          <img src="images/youtube.png" alt="YouTube">
-        </a>
-        <a href="https://www.linkedin.com/in/geomarket-0aa470323/" target="_blank" class="social-icon">
-          <img src="images/linkedin.png" alt="LinkedIn">
-        </a>
-      </div>
     </div>
   </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <a href="#">
+                <img src="images/GeoMarketlogo3.png" alt="GeoMarket Logo">
+            </a>
+        </div>
+        <div class="footer-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#productos-esenciales">Productos</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <div class="footer-social-media">
+            <a href="https://www.facebook.com/people/Geo-Market/61564059224448/?_rdc=1&_rdr" target="_blank" class="social-icon">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/geo.market.24/" target="_blank" class="social-icon">
+                <img src="images/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/@geomarket4" target="_blank" class="social-icon">
+                <img src="images/tiktok.png" alt="TikTok">
+            </a>
+            <a href="https://www.youtube.com/@GeoMarket-c6w" target="_blank" class="social-icon">
+                <img src="images/youtube.png" alt="YouTube">
+            </a>
+            <a href="https://www.linkedin.com/in/geomarket-0aa470323/" target="_blank" class="social-icon">
+                <img src="images/linkedin.png" alt="LinkedIn">
+            </a>
+        </div>
+        <div class="footer-info">
+            <p>&copy; 2024 GeoMarket. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
   
   
 
