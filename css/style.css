@@ -21,7 +21,7 @@
     border: none;
     text-decoration: none;
     text-transform:none;
-    transition: all 0.3s ease; /* Shorter transition for better hover effects */
+    transition: all 0.3s ease;
 }
 
 html {
@@ -32,7 +32,7 @@ html {
 }
 
 html::-webkit-scrollbar {
-    width: 1rem; /* Reduced width for the scrollbar */
+    width: 1rem;
 }
 
 html::-webkit-scrollbar-track {
@@ -41,7 +41,7 @@ html::-webkit-scrollbar-track {
 
 html::-webkit-scrollbar-thumb {
     background-color: #6e6e6ead;
-    border-radius: 1rem; /* Adjusted to match the reduced width */
+    border-radius: 1rem;
 }
 
 body {
@@ -76,8 +76,8 @@ body {
 }
 
 .header .logo img {
-    width: 150px; /* Adjust the width to make the image smaller */
-    height: auto; /* This keeps the aspect ratio of the image */
+    width: 150px;
+    height: auto;
 }
 
 .header .navbar {
@@ -86,21 +86,21 @@ body {
 }
 
 .header .navbar a {
-    margin: 0 3rem; /* Increase margin to create more space between links */
+    margin: 0 3rem;
     font-size: 1.6rem;
     font-weight:bold;
     color: var(--black);
-    padding-bottom: 0.2rem; /* Reduced padding to keep the border closer to the text */
-    border-bottom: 0; /* Initial state, no border */
-    transition: color 0.3s ease, padding-bottom 0.3s ease, border-bottom 0.3s ease, transform 0.3s ease; /* Smooth transition for color, padding, border, and zoom effect */
-    display: inline-block; /* Ensure that transform applies correctly */
+    padding-bottom: 0.2rem;
+    border-bottom: 0;
+    transition: color 0.3s ease, padding-bottom 0.3s ease, border-bottom 0.3s ease, transform 0.3s ease;
+    display: inline-block;
 }
 
 .header .navbar a:hover {
     color: var(--main-color);
-    border-bottom: .3rem solid var(--main-color); /* Increase border thickness to make it bolder */
-    padding-bottom: 0.2rem; /* Match padding with the initial state for proper alignment */
-    transform: scale(1.1); /* Add a zoom effect */
+    border-bottom: .3rem solid var(--main-color);
+    padding-bottom: 0.2rem;
+    transform: scale(1.1);
 }
 
 .header .icons div {
@@ -108,15 +108,14 @@ body {
     cursor: pointer;
     font-size: 2.5rem;
     margin-left: 2rem;
-    transition: color 0.3s ease, transform 0.3s ease; /* Add transition for zoom effect on icons */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .header .icons div:hover {
     color: var(--main-color);
-    transform: scale(1.1); /* Add a zoom effect to icons */
+    transform: scale(1.1);
 }
 
-/* Ensure menu-btn is hidden */
 #products-btn {
     display: none;
 }
@@ -157,6 +156,51 @@ body {
     color: var(--main-color);
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-title {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    color: var(--main-color);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 0.5rem;
+    padding: 1rem 0;
+    text-align: left;
+}
+
+.dropdown-menu a {
+    color: var(--black);
+    padding: 0.8rem 1.6rem;
+    text-decoration: none;
+    display: block;
+    font-size: 1.4rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 0.3rem;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 .inicio {
     min-height: 100vh;
     display: flex;
@@ -166,9 +210,9 @@ body {
     background-size: cover;
     padding: 5rem;
     position: relative;
-    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.3), /* Inner shadow for embedded effect */
-                0 0 15px rgba(0, 0, 0, 0.1); /* Soft outer shadow */
-    margin: 3rem; /* Add margin around the section */
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.3),
+                0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 3rem;
    }
 
 .inicio .content {
@@ -197,7 +241,7 @@ body {
     font-size: 4.5Rem;
     margin: 15px 0;
     color: var(--main-color);
-    text-align: center; /* Center align the section heading */
+    text-align: center;
 }
 
 .about-content {
@@ -205,7 +249,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 50px; /* Add space between the image and text */
+    gap: 50px;
 }
 
 .about-image {
@@ -252,8 +296,6 @@ body {
     background: var(--brown);
 }
 
-
-/* Essential Products Section */
 .essential-products {
     padding: 5rem 7%;
     background-color: var(--bg);
@@ -280,10 +322,10 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    min-height: 350px; /* Reduce height as there is only one button now */
+    min-height: 350px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align content to the top */
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -315,8 +357,8 @@ body {
 
 .product .btn-container {
     display: flex;
-    justify-content: center; /* Center the button horizontally */
-    margin-top: auto; /* Push the button to the bottom */
+    justify-content: center;
+    margin-top: auto;
     width: 80%;
 }
 
@@ -331,7 +373,7 @@ body {
     transition: background 0.3s ease, transform 0.3s ease;
     display: flex;
     align-items: center;
-    width: 100%; /* Make the button full width */
+    width: 100%;
 }
 
 .product .btn-container .btn-cart:hover {
@@ -344,18 +386,15 @@ body {
     background-color: #efd8ce;
 }
 
-
-
-/* Servicios Section */
 .services {
     padding: 5rem 7%;
     background-color: var(--bg);
     text-align: center;
     font-size: 3rem;
     color: var(--main-color);
-    font-weight: lighter; /* Lighter font weight */
-    margin-top: 0; /* Ensure no top margin is pushing it down */
-    margin-bottom: 0; /* Ensure no bottom margin is pushing it down */
+    font-weight: lighter;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .services-container {
@@ -363,25 +402,23 @@ body {
     padding: 1rem;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 2rem; /* Space between service cards */
+    gap: 2rem;
 }
 
-/* Service Card */
 .service {
     background:var(--lightbg);
     border-radius: 1rem;
     padding: 2rem;
-    width: calc(50% - 2rem); /* 2 cards per row */
+    width: calc(50% - 2rem);
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for transform and background-color */
-    min-height: 450px; /* Ensure this is not too tall */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    min-height: 450px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Space out content evenly */
+    justify-content: space-between;
 }
 
-/* Service Image */
 .service img {
     width: 100%; /* Full width of the card */
     height: auto; /* Maintain aspect ratio */
@@ -577,16 +614,10 @@ body {
 
 #contacto {
     background-color: var(--lightgreen);
-    padding: 50px 0;
+    padding: 20px 0;
     text-align: center;
     font-size: 3rem;
-  }
-  
-#contacto {
-    background-color: var(--lightgreen);
-    padding: 50px 0;
-    text-align: center;
-    font-size: 3rem;
+    padding-bottom: 30px;
 }
 
 #contacto h2 {
@@ -629,60 +660,194 @@ body {
     transform: scale(1.1); /* Efecto de zoom */
 }
 
-.social-media {
-    margin-top: 30px;
+/* Footer Styles */
+.footer {
+    background-color: var(--bg); /* Dark background for contrast */
+    color: var(--brown);
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-.social-icon {
-    margin: 0 10px;
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    width: 130px; /* Adjust size based on your logo */
+    margin-bottom: 3px;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--black); /* White text */
+    font-size: 1.3rem;
+    font-weight: 600; /* Bold text for visibility */
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--brown); /* Highlight color on hover */
+    text-decoration: underline;
+}
+
+.footer-social-media {
+    margin: 20px 0;
+}
+
+.footer-social-media .social-icon {
     display: inline-block;
-    transition: transform 0.3s ease; /* Efecto de zoom */
+    margin: 0 10px;
 }
 
-.social-icon img {
-    width: 40px;
-    height: 40px;
+.footer-social-media .social-icon img {
+    width: 40px; /* Adjust size based on your icons */
+    transition: transform 0.3s ease;
 }
 
-.social-icon:hover {
-    transform: scale(1.2); /* Zoom al pasar el cursor */
+.footer-social-media .social-icon img:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
 }
 
-  
-  
+.footer-info {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: var(--black); /* Lighter text color for less prominence */
+}
 
 
+/* Styling for the section */
+.service-categorie1{
+background: var(--lightgreen);
+padding-bottom: 20px;
+}
 
+.service-categorie1 h1 {
+    color: var(--main-color);
+    font-size: 5rem;
+    text-align: center;
+    padding-top: 100PX;
+}
 
-/* Responsive adjustments */
-@media(max-width: 768px) {
-    .product {
-        width: calc(50% - 1rem); /* Two products per row on smaller screens */
+.service-categorie1 p {
+    color: var(--black);
+    font-size: 2Rem;
+    text-align: justify;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.servicios {
+    padding: 20px;
+    background-color: var(--bg);
+    padding-bottom: 50px;
+}
+
+.servicios h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 5rem;
+    color: var(--brown);
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.service-card {
+    background: var(--lightbg);
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(40% - 2rem); /* Adjust width to keep two cards per row */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin: 10px 0; /* Adds vertical margin for spacing */
+    padding: 20px; /* Adds padding inside the card */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content is spaced evenly */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.service-card:hover {
+    transform: scale(1.05); /* Slightly enlarges the card */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adds a larger shadow */
+    background: #efd8ce; /* Light background color on hover */
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 8px 8px 0 0; /* Rounded corners for the top of the image */
+}
+
+.service-info {
+    padding: 10px 0; /* Adds padding around text */
+    flex: 1; /* Allows service-info to grow and push the button down */
+}
+
+.service-info h2 {
+    margin-top: 0;
+    font-size: 1.8rem; /* Increased font size for the title */
+    color: var(--brown);
+}
+
+.service-info p {
+    font-size: 1.5rem; /* Increased font size for the description */
+    margin: 10px 0;
+}
+
+.btn-servicios {
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+    color: var(--white);
+    background: var(--brown);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    width: 35%;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background and transform */
+    display: block; /* Ensure the button takes up full width */
+    margin-top: auto; /* Push the button to the bottom of the card */
+}
+
+.btn-servicios:hover {
+    background-color:var(--main-color);
+    transform: scale(1.1);
+}
+
+/* Optional: Add media query for smaller screens */
+@media (max-width: 768px) {
+    .service-card {
+        width: calc(100% - 2rem); /* Stacks cards in a single column on smaller screens */
     }
 }
 
-@media(max-width: 450px) {
-    .product {
-        width: calc(100% - 2rem); /* One product per row on very small screens */
-    }
-}
 
 
 
 
+/* Base Styles (applies to all screen sizes) */
 
-
-
-
-
-
-
-
-
-
-@media(max-width: 991px) {
+/* Responsive Adjustments */
+@media (max-width: 991px) {
     html {
-        font-size: 55%;
+        font-size: 55%; /* Adjust base font size for medium screens */
     }
 
     .header {
@@ -690,7 +855,10 @@ body {
     }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 1rem); /* Two products per row on smaller screens */
+    }
 
     #products-btn {
         display: inline-block;
@@ -698,16 +866,16 @@ body {
 
     .header .navbar {
         position: absolute;
-        top: 100%; /* Positions navbar just below the header */
+        top: 100%; /* Position navbar just below the header */
         right: -100%;
-        background:#fff;
+        background: #fff;
         width: 15rem;
         height: calc(100vh - 9.5rem);
         flex-direction: column; /* Ensure vertical stacking */
-        z-index: 999; /* Ensures navbar is on top */
+        z-index: 999; /* Ensure navbar is on top */
     }
 
-    .header .navbar.active{
+    .header .navbar.active {
         right: 0;
     }
 
@@ -719,13 +887,198 @@ body {
     }
 
     .header .search-form {
-        width: 90;
+        width: 90%;
         right: 2rem;
+    }
+
+    .cart-items-container {
+        width: 90%; /* Limit width to 90% of the screen */
+        max-width: 400px; /* Maximum width to prevent it from becoming too wide */
+        margin: 0 auto; /* Center the cart */
+        top: 0; /* Align to the top */
+        margin-top: 10px;
+    }
+
+    .cart-item {
+        display: flex; /* Default horizontal layout */
+        align-items: center; /* Center items vertically */
+        margin-bottom: 1rem; /* Add space between items */
+    }
+
+    .cart-item img {
+        width: 80px; /* Adjust image width */
+        margin-right: 1rem; /* Add space between image and content */
+    }
+
+    .cart-item .content {
+        flex: 1; /* Allow content to take up remaining space */
+    }
+
+    .cart-item .content h3,
+    .cart-item .price {
+        font-size: 1.8rem; /* Smaller font size for titles and price */
+    }
+
+    .quantity-btn {
+        padding: 5px 6px; /* Smaller padding for quantity buttons */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .quantity span {
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .cart-total {
+        font-size: 1.8rem; /* Smaller font size for total */
+    }
+
+    .cart-items-container .btn {
+        font-size: 1.8rem; /* Smaller font size for button */
+        padding: 8px 0; /* Reduced padding */
+    }
+
+    .services-container {
+        flex-direction: column; /* Stack service cards vertically */
+        align-items: center; /* Center cards horizontally */
+    }
+
+    .service {
+        width: 100%; /* Full width of the container */
+        max-width: 500px; /* Limit maximum width */
     }
 }
 
-@media(max-width: 450px) {
+@media (max-width: 450px) {
     html {
-        font-size: 50%;
+        font-size: 50%; /* Further reduce base font size for very small screens */
+    }
+
+    .product {
+        width: calc(100% - 2rem); /* One product per row on very small screens */
+    }
+
+    .cart-items-container {
+        width: 90%; /* Limit width to 90% of the screen */
+        max-width: 350px; /* Maximum width to prevent it from becoming too wide */
+        padding: 0.5rem; /* Reduced padding for very small screens */
+        margin: 0 auto; /* Center the cart */
+        margin-top: 65px;
+    }
+
+    .cart-item {
+        flex-direction: column; /* Switch to vertical layout */
+        align-items: flex-start; /* Align items to the start */
+        text-align: left; /* Align text to the left */
+    }
+
+    .cart-item img {
+        width: 100px; /* Adjust image width */
+        margin: 0 0 0.5rem 0; /* Space below image */
+    }
+
+    .cart-item .content h3,
+    .cart-item .price {
+        font-size: 1.8rem; /* Adjust font size for titles and price */
+    }
+
+    .quantity-btn {
+        padding: 4px 6px; /* Smaller padding for quantity buttons */
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .quantity span {
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .cart-total {
+        font-size: 1.8rem; /* Adjust font size for total */
+    }
+
+    .cart-items-container .btn {
+        font-size: 1.8rem; /* Smaller font size for button */
+        padding: 8px 0; /* Reduced padding */
+    }
+
+    .services {
+        font-size: 2rem; /* Smaller font size for very small screens */
+    }
+
+    .service h3 {
+        font-size: 1.8rem; /* Smaller font size for titles */
+    }
+
+    .service p {
+        font-size: 1.2rem; /* Smaller font size for descriptions */
+    }
+
+    .service .btn-more-info {
+        font-size: 1.2rem; /* Smaller font size for button */
+        padding: 0.6rem 1.6rem; /* Adjust padding */
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 2rem 3%; /* Adjust padding for smaller screens */
+    }
+
+    .contact-form {
+        width: 90%; /* Adjust width for smaller screens */
+        padding: 1.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+
+    .contact-form button {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    .contact-social-icons {
+        margin-top: 1.5rem; /* Adjust margin for social icons */
+    }
+
+    .contact-social-icons a {
+        margin: 0 0.5rem; /* Adjust margin for icons */
+    }
+
+    .contact-social-icons img {
+        width: 25px; /* Adjust icon size */
+    }
+}
+
+@media (max-width: 450px) {
+    .contact {
+        padding: 1.5rem 2%; /* Further adjust padding for very small screens */
+    }
+
+    .contact-form {
+        width: 100%; /* Full width of the screen */
+        padding: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.8rem; /* Smaller font size */
+    }
+
+    .contact-form button {
+        font-size: 0.8rem;
+        padding: 0.6rem;
+    }
+
+    .contact-social-icons {
+        margin-top: 1rem; /* Adjust margin for social icons */
+    }
+
+    .contact-social-icons a {
+        margin: 0 0.3rem; /* Adjust margin for icons */
+    }
+
+    .contact-social-icons img {
+        width: 20px; /* Adjust icon size */
     }
 }
